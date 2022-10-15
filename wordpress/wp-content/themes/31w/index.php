@@ -19,34 +19,18 @@ get_header();
 
 		<?php
 		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
+				the_title();
+				the_content();
+				$linkHTML = "<a href='".get_the_permalink()."'>Suivant</a>"; ?>
+				<blockquote><?php the_excerpt(); ?></blockquote>
+				<blockquote><?= wp_trim_words(get_the_excerpt(),3,$linkHTML) ?></blockquote>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
+				<pre><?= the_category(); ?></pre>
+				<pre><?= the_date(); ?></pre>
+				<pre><?= the_permalink(); ?></pre>
+<?php			endwhile;
 		endif;
 		?>
 
