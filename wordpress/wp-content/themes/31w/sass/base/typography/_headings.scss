@@ -5,4 +5,9 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: $font__titre__secondaire;
 }
+
+h1 {
+	font-size: clamp(1rem, 5vw, 7rem);
+  }
