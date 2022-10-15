@@ -1,62 +1,27 @@
 /*!
-Theme Name: 31w
+Theme Name: 31W - Mykhaylo Kuzmin
 Theme URI: https://github.com/Raritetnik/31w_a22_MK.git
 Author: Mykhyalo Kuzmin
 Author URI: http://underscores.me/
 Description: Description
 Version: 1.0.0
-Text Domain: underscore
+Text Domain: _31w
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 */
 
 // Import variables and mixins.
-@import "abstracts/abstracts";
+@import "variables/colors";
+@import "variables/typography";
 
-/*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
 
-/* Normalize
---------------------------------------------- */
+@import "generic/box-sizing";
 @import "generic/normalize";
 
-/* Box sizing
---------------------------------------------- */
-@import "generic/box-sizing";
 
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-@import "base/base";
+@import "base/elements/body";
+@import "base/elements/fields";
+@import "base/elements/buttons";
 
-/*--------------------------------------------------------------
-# Layouts
---------------------------------------------------------------*/
-// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-@import "components/components";
-
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-
-/* Jetpack infinite scroll
---------------------------------------------- */
-@import "plugins/jetpack/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Utilities
---------------------------------------------------------------*/
-
-/* Accessibility
---------------------------------------------- */
-@import "utilities/accessibility";
-
-/* Alignments
---------------------------------------------- */
-@import "utilities/alignments";
+@import "base/typography/copy";
+@import "base/typography/headings";
