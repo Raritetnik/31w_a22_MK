@@ -9,6 +9,7 @@ Text Domain: _31w
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 */
+/* Normalizers */
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
@@ -95,8 +96,7 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -331,6 +331,7 @@ template {
   display: none;
 }
 
+/* Elements */
 body {
   background: #fff;
 }
@@ -411,6 +412,7 @@ input[type=submit]:focus {
   border-color: #aaa #bbb #bbb;
 }
 
+/* Typographie */
 p {
   margin-bottom: 1.5em;
 }
@@ -474,5 +476,37 @@ h6 {
 }
 
 h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: clamp(1rem, 5vw, 7rem);
+}
+
+h2 {
+  font-size: clamp(0.9rem, 4vw, 4rem);
+}
+
+h3 {
+  font-size: clamp(0.9rem, 34vw, 3rem);
+}
+
+h4 {
+  font-size: clamp(0.8rem, 3vw, 2rem);
+}
+
+h5 {
+  font-size: clamp(0.7rem, 3vw, 2rem);
+}
+
+h6 {
+  font-size: clamp(0.6rem, 2vw, 2rem);
+} /* Composantes */
+.menu__primaire {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu__primaire .menu {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 40%;
+  list-style-type: none;
 }/*# sourceMappingURL=style.css.map */
