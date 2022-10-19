@@ -65,3 +65,7 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+	<aside class="site__sidebar">
+		<h2>Menu Sidebar</h2>
+
+	</aside>

@@ -511,4 +511,32 @@ h6 {
   justify-content: space-around;
   margin-left: 40%;
   list-style-type: none;
+}
+
+.menu__primaire .menu a {
+  padding: 10px 10px;
+}
+
+/* Layout */
+.site {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-areas: "header header" "sidebar main" "footer footer";
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.site-main {
+  grid-area: main;
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.site__sitebar {
+  grid-area: sidebar;
+}
+
+.site-footer {
+  grid-area: footer;
 }/*# sourceMappingURL=style.css.map */
