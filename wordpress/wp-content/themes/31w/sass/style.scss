@@ -14,12 +14,18 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 @import "variables/colors";
 @import "variables/typography";
 
+/* Normalizers */
 @import "generic/box-sizing";
 @import "generic/normalize";
 
+/* Elements */
 @import "base/elements/body";
 @import "base/elements/fields";
 @import "base/elements/buttons";
 
+/* Typographie */
 @import "base/typography/copy";
 @import "base/typography/headings";
+
+/* Composantes */
+@import "composants/nav_primaire";
