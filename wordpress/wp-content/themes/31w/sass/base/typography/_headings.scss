@@ -9,5 +9,22 @@ h6 {
 }
 
 h1 {
+	font-family: $font_titre;
 	font-size: clamp(1rem, 5vw, 7rem);
-  }
+}
+
+h2 {
+	font-size: clamp(.9rem, 4vw, 4rem);
+}
+h3 {
+	font-size: clamp(.9rem, 34vw, 3rem);
+}
+h4 {
+	font-size: clamp(.8rem, 3vw, 2rem);
+}
+h5 {
+	font-size: clamp(.7rem, 3vw, 2rem);
+}
+h6 {
+	font-size: clamp(.6rem, 2vw, 2rem);
+}
