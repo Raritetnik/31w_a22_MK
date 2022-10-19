@@ -49,7 +49,8 @@ function underscore_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'underscore' ),
+			'principale' => esc_html__( 'Principale', 'underscore' ),
+			'footer' => esc_html__( 'Footer', 'underscore' ),
 		)
 	);
 
