@@ -498,7 +498,9 @@ h5 {
 
 h6 {
   font-size: clamp(0.6rem, 2vw, 2rem);
-} /* Composantes */
+}
+
+/* Composantes */
 .menu__primaire {
   display: flex;
   justify-content: flex-end;
