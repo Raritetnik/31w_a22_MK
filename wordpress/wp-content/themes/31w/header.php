@@ -29,12 +29,10 @@
 		<?php
 		// Menu de navigation
 		wp_nav_menu(array(
-			'Menu' => "primaire",
-			'container' => "nav",
-			'container_class' => "menu__primaire",
+			"menu" => "primaire",
+			"container" => "nav",
+			"container_class" => "menu__primaire",
 		));
-
-
 		?>
 		<div class="site-branding">
 			<?php
