@@ -20,16 +20,19 @@ get_header();
 		<?php
 		if ( have_posts() ) :
 			while ( have_posts() ) :
-				the_post();
-				the_title();
-				the_content();
-				$linkHTML = "<a href='".get_the_permalink()."'>Suivant</a>"; ?>
-				<blockquote><?php the_excerpt(); ?></blockquote>
-				<blockquote><?= wp_trim_words(get_the_excerpt(),3,$linkHTML) ?></blockquote>
+				the_post();?>
+				<div class="publication">
+					<h2 class="pub__titre"><?= the_title() ?></h2>
+					<blockquote><?= the_content();
+					$linkHTML = "... <a href='".get_the_permalink()."'>lire la suite</a>"; ?>
+					<?php the_excerpt(); ?>
+					<?= wp_trim_words(get_the_excerpt(),3,$linkHTML) ?></blockquote>
 
-				<pre><?= the_category(); ?></pre>
-				<pre><?= the_date(); ?></pre>
-				<pre><?= the_permalink(); ?></pre>
+					<div class="boite-info">
+						<p><?= get_the_date(); ?></p>
+						<p><?= get_the_permalink(); ?></p>
+					</div>
+				</div>
 <?php			endwhile;
 		endif;
 		?>

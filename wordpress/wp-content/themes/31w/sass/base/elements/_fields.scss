@@ -31,3 +31,15 @@ select {
 textarea {
 	width: 100%;
 }
+
+.publication {
+	border: 2px solid black;
+	margin: 5px;
+}
+
+.boite-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+

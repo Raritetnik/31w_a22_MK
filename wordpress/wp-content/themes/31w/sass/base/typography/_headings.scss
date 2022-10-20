@@ -28,3 +28,18 @@ h5 {
 h6 {
 	font-size: clamp(.6rem, 2vw, 2rem);
 }
+
+.site-title {
+	margin-left: 50px;
+}
+
+.site-title a {
+	text-decoration: none;
+}
+.site-title a:hover {
+	text-decoration: none;
+	color: orangered;
+}
+.pub__titre {
+	padding-left: 40px;
+}

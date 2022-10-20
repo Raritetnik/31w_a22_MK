@@ -384,6 +384,17 @@ textarea {
   width: 100%;
 }
 
+.publication {
+  border: 2px solid black;
+  margin: 5px;
+}
+
+.boite-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 button,
 input[type=button],
 input[type=reset],
@@ -500,9 +511,27 @@ h6 {
   font-size: clamp(0.6rem, 2vw, 2rem);
 }
 
+.site-title {
+  margin-left: 50px;
+}
+
+.site-title a {
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  text-decoration: none;
+  color: orangered;
+}
+
+.pub__titre {
+  padding-left: 40px;
+}
+
 /* Composantes */
 .menu__primaire {
   display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
   justify-content: flex-end;
 }
 
@@ -515,11 +544,17 @@ h6 {
 }
 
 .menu__primaire .menu a {
-  padding: 10px 10px;
+  color: white;
+  text-decoration: none;
 }
 
 .menu__primaire .menu-item {
-  text-decoration: none;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu__primaire .menu-item:hover {
+  background-color: rgba(222, 88, 16, 0.6);
 }
 
 .menu__aside {

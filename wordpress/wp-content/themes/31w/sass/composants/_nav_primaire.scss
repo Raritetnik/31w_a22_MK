@@ -1,5 +1,6 @@
 .menu__primaire {
     display: flex;
+    background-color: rgba($color: #000000, $alpha: .6);
     justify-content: flex-end;
 }
 
@@ -12,10 +13,16 @@
 }
 
 .menu__primaire .menu a{
-    padding: 10px 10px;
+    color: white;
+    text-decoration: none;
 }
 
 .menu__primaire .menu-item {
-    text-decoration: none;
+    padding: 10px 30px;
+    background-color: rgba($color: #000000, $alpha: .8);
+}
+
+.menu__primaire .menu-item:hover {
+    background-color: rgba($color: #de5810, $alpha: .6);
 }
 
