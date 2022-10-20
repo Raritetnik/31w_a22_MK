@@ -510,11 +510,16 @@ h6 {
   display: flex;
   justify-content: space-around;
   margin-left: 40%;
+  flex: 1;
   list-style-type: none;
 }
 
 .menu__primaire .menu a {
   padding: 10px 10px;
+}
+
+.menu__primaire .menu-item {
+  text-decoration: none;
 }
 
 /* Layout */
@@ -525,15 +530,18 @@ h6 {
 }
 
 .site-header {
+  background-color: rgba(0, 0, 0, 0.2);
   grid-area: header;
 }
 
 .site-main {
   grid-area: main;
+  background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 
 .site__sitebar {
+  background-color: bisque;
   grid-area: sidebar;
 }
 
