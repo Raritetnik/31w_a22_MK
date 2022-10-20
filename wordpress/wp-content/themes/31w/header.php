@@ -73,5 +73,4 @@
 			"container_class" => "menu__aside",
 		));
 		?>
-		?>
 	</aside>
