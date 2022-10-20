@@ -56,5 +56,5 @@ Ajouter un dossier Sass au thème de l'étape1.
 - Ajouter le menu **sidebar** dans « **header.php** »
 - Filter les choix du menu sidebar pour ne pas afficher le code de cours et la durée du cours
 
-Nom: Raritetnik
+Nom: Raritetnik<br>
 Mot de passe: 3ZQgytH5BnQA8ib1Ge
