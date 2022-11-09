@@ -64,9 +64,17 @@ function underscore_scripts() {
 					  'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap',
 					   false );
 */
-
 }
 add_action( 'wp_enqueue_scripts', 'underscore_scripts' );
+
+// Les images d'icones script
+function icons_enqueue() {
+    wp_enqueue_script(
+        'init-icons',
+        'https://kit.fontawesome.com/62104b1a3a.js'
+    );
+}
+add_action('wp_enqueue_scripts', 'icons_enqueue');
 
 
 /* ----------------------------------------- Initialisation de la fonction de menu */

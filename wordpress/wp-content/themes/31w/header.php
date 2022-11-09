@@ -45,7 +45,7 @@
 	</header><!-- #masthead -->
 	<aside class="site__menu">
 		<input type="checkbox" name="chk-burger" id="chk-burger" class="chk-burger">
-		<label class="burger" for="chk-burger">&#11135;</label>
+		<label class="burger" for="chk-burger"><i class="fa-solid fa-bars"></i></label>
 
 		<?php wp_nav_menu(array(
 					"menu" => "aside",

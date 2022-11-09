@@ -6,7 +6,7 @@
 }
 
 .chk-burger:checked ~ .burger {
-  transform: rotate(90deg);
+  background-color: rgba($color: #000000, $alpha: .8);
 }
 
 .chk-burger:checked ~ .menu__aside {
@@ -18,10 +18,14 @@
   height: 2rem;
   top: 10px;
   left: 10px;
-  transform: rotate(0deg);
   transition: transform 0.5s;
   font-size: 2rem;
   color: #fff;
+  padding-left: 2px;
+}
+
+.fa-bars {
+  padding: 0px;
 }
 
 .menu__aside {

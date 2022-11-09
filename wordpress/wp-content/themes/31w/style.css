@@ -551,6 +551,7 @@ h6 {
   flex-direction: column;
   justify-content: center;
   margin: 0;
+  padding: 1.2vmin;
 }
 .menu__principal .menu {
   list-style-type: none;
@@ -564,6 +565,7 @@ h6 {
   text-decoration: none;
   color: #fff;
   padding: 10px;
+  font-size: 18px;
 }
 .menu__principal a:hover {
   background-color: #555;
@@ -579,7 +581,7 @@ h6 {
 }
 
 .chk-burger:checked ~ .burger {
-  transform: rotate(90deg);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .chk-burger:checked ~ .menu__aside {
@@ -592,10 +594,14 @@ h6 {
   height: 2rem;
   top: 10px;
   left: 10px;
-  transform: rotate(0deg);
   transition: transform 0.5s;
   font-size: 2rem;
   color: #fff;
+  padding-left: 2px;
+}
+
+.fa-bars {
+  padding: 0px;
 }
 
 .menu__aside {
