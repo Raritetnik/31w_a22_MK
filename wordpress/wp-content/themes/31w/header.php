@@ -23,43 +23,39 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'underscore' ); ?></a>
+	<header id="masthead" class="site__header">
 
-	<header id="masthead" class="site-header">
-		<?php
-		// Menu de navigation
-		wp_nav_menu(array(
+	<?php  /* Affichage du menu principal */
+			wp_nav_menu(array(
 			"menu" => "primaire",
 			"container" => "nav",
-			"container_class" => "menu__primaire",
-		));
-		?>
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
+			"container_class" => "menu__principal")); ?>
+
+		<div class="site__branding">
+			<h1 class="site__title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</h1>
+		<?php
 			$underscore_description = get_bloginfo( 'description', 'display' );
-			if ( $underscore_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $underscore_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			if ( $underscore_description || is_customize_preview() ) : ?>
+			<p class="site__description"><?php echo $underscore_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
+
 	</header><!-- #masthead -->
-	<aside class="site__sidebar">
-		<h2>Menu Sidebar</h2>
-		<?php
-		wp_nav_menu(array(
-			"menu" => "aside",
-			"container" => "nav",
-			"container_class" => "menu__aside",
+	<aside class="site__menu">
+		<input type="checkbox" name="chk-burger" id="chk-burger" class="chk-burger">
+		<label class="burger" for="chk-burger">&#11135;</label>
+
+		<?php wp_nav_menu(array(
+					"menu" => "aside",
+					"container" => "nav",
+					"container_class" => "menu__aside"
 		));
 		?>
 	</aside>
+	<aside class="site__sidebar">
+		<div><?php get_sidebar( 'aside-1' ); ?></div>
+		<div><?php get_sidebar( 'aside-2' ); ?></div>
+	</aside>
+

@@ -10,14 +10,16 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 */
 
-// Import variables and mixins.
+// Importation des variables.
+@import "variables/couleurs";
 @import "variables/colors";
 @import "variables/typography";
 @import "variables/structure";
+@import "variables/polices";
 
-/* Normalizers */
-@import "generic/box-sizing";
+// normalize et box-sizing
 @import "generic/normalize";
+@import "generic/box-sizing";
 
 /* Elements */
 @import "base/elements/body";
@@ -28,8 +30,8 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 @import "base/typography/copy";
 @import "base/typography/headings";
 
-/* Composantes */
-@import "composants/nav_primaire";
+// Les composants
+@import "composants/nav_principal";
 @import "composants/nav_aside";
 
 /* Layout */

@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The main template file
@@ -9,47 +10,31 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package igc31w
+ * @package underscore
  */
-
-get_header();
-
 ?>
-<h1>category-cours.php</h1>
-	<main class="site__main">
+<!-- h1 class="trace">front-page.php</h1 -->
+<?php get_header(); ?>
 
-		<?php
+    <main class="site__main">
+    <?php
 		if ( have_posts() ) :
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-				$titre = get_the_title();
-				$code_cours = substr($titre,0,7);
-				$heure_cours = substr($titre,strrpos($titre,'('));
-				$titre = substr($titre,8);
-				$longueur = strlen($titre);
+            while ( have_posts() ) :
+				the_post(); ?>
+                <h1><a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?></a></h1>
+                <h2>Durée du cours: <?php  ?></h2>
+                <?php the_content(null, true); ?>
 
-				//$titre = substr($titre, strrpos($titre,'(') - strlen($titre));
-				$titre = substr($titre, 0, strrpos($titre,'(') - strlen($titre));
-				?>
-			<h1><?= $titre  ?></h1>
+            <?php endwhile; ?>
+        <?php endif; ?>
 
-			<?php the_content();
-			$le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
-			?>
+    </main>
+<?php get_footer(); ?>
+</html>
 
-			<blockquote><?php the_excerpt(); ?></blockquote>
-			<blockquote><?= wp_trim_words(get_the_excerpt(),5, $le_permalien); ?></blockquote>
 
-			<pre><?php the_category(); ?></pre>
-			<pre><?php the_date(); ?></pre>
-			<pre><?php the_permalink();  ?></pre>
-			<pre><?php the_author(); ?></pre>
 
-<?php
-			endwhile;
-			endif;
-		?>
-	</main><!-- #main -->
-<?php
-get_footer();
+
+
+

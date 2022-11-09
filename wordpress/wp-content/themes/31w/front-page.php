@@ -13,19 +13,22 @@
  * @package underscore
  */
 ?>
-
+<!-- h1 class="trace">front-page.php</h1 -->
 <?php get_header(); ?>
 
     <main class="site__main">
     <?php
 		if ( have_posts() ) :
             while ( have_posts() ) :
-				the_post();
-                the_title('<h2>','</h2>');
-                the_content(null, true);
-            endwhile;
-        endif;
-    ?>
+				the_post(); ?>
+                <h1><a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?></a></h1>
+
+                <?php the_content(null, true); ?>
+
+            <?php endwhile; ?>
+        <?php endif; ?>
+
     </main>
 <?php get_footer(); ?>
 </html>

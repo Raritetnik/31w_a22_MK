@@ -1,0 +1,38 @@
+// nav
+.menu__principal {
+  background-color: rgba($color: #000000, $alpha: .7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  //ul
+  .menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+  }
+  //li
+  .menu-item {
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+  }
+  a:hover {
+    background-color: #555;
+  }
+} // fin .menu__principal
+
+/* transformation en CSS */
+.menu-primaire-container {
+}
+.menu-primaire-container .menu {
+}
+.menu-primaire-container .menu-item {
+}
+.menu-primaire-container a {
+}
