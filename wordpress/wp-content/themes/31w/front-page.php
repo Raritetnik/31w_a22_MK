@@ -21,10 +21,16 @@
 		if ( have_posts() ) :
             while ( have_posts() ) :
 				the_post(); ?>
-                <h1><a href="<?php the_permalink(); ?>">
-                <?php the_title(); ?></a></h1>
+                <div class="cart-post">
+                    <h1><a class='post__titre' href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?></a></h1>
+                    <p>Desription: <?php the_content(null, true); ?></p>
 
-                <?php the_content(null, true); ?>
+                    <div class="post-details">
+                        <p>Date: <?= get_the_date() ?></p>
+                        <p>Auteur: <?php the_author() ?></p>
+                    </div>
+                </div>
 
             <?php endwhile; ?>
         <?php endif; ?>

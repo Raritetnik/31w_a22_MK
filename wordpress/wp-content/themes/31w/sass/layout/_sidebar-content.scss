@@ -1,12 +1,13 @@
 .site__header {
   grid-area: header;
-  background-color: #ddd;
+  background-color: rgba($color: #000000, $alpha: .3);
+  color: white;
 }
 
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-  background-color: #ccc;
+  background-color: rgba($color: #000000, $alpha: .1);
 }
 
 .site__menu {

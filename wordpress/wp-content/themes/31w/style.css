@@ -578,10 +578,12 @@ h6 {
 
 .chk-burger {
   display: none;
+  opacity: 0;
 }
 
 .chk-burger:checked ~ .burger {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: black;
+  opacity: 1;
 }
 
 .chk-burger:checked ~ .menu__aside {
@@ -598,6 +600,7 @@ h6 {
   font-size: 2rem;
   color: #fff;
   padding-left: 2px;
+  opacity: 1;
 }
 
 .fa-bars {
@@ -610,9 +613,10 @@ h6 {
   width: 100vw;
   top: 70px;
   z-index: 20;
+  margin-right: 2vmin;
   transform: translateX(-100vw);
   transition: transform 0.5s cubic-bezier(0.07, 0.64, 0.32, 0.91);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: black;
 }
 @media screen and (min-width: 700px) {
   .menu__aside {
@@ -630,25 +634,85 @@ h6 {
   padding: 0.6vmin;
   width: 100%;
 }
+@media screen and (min-width: 700px) {
+  .menu__aside .menu-item a {
+    font-size: 2vmin;
+  }
+}
 .menu__aside .menu-item:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 .menu__aside a {
   text-decoration: none;
   color: white;
-  font-size: 1.7vmin;
+  font-size: 3vmin;
+}
+
+.site__title a {
+  font-weight: 900;
+  color: tomato;
+  text-decoration: none;
+  font-size: 7vmin;
+  margin-left: 40px;
+}
+
+.site__description {
+  margin-left: 20px;
+  font-size: 2vmin;
+}
+
+.site__header {
+  background-image: url(https://images.hdqwalls.com/download/among-trees-night-is-coming-ox-2048x1152.jpg);
+  background-size: cover;
+}
+
+.cart-post {
+  padding: 2vmin;
+  border: 0.4vmin solid white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: white;
+}
+
+.cart-post h1 {
+  margin: 0;
+}
+
+.post__titre {
+  text-decoration: none;
+  color: tomato;
+  font-size: 5vmin;
+}
+
+.cart-post .post-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Accueil */
+.info-accueil {
+  padding: 3vmin;
+  color: white;
+  text-align: center;
+}
+
+.info-accueil h2 {
+  color: tomato;
 }
 
 /* Layout */
 .site__header {
   grid-area: header;
-  background-color: #ddd;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-  background-color: #ccc;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .site__menu {

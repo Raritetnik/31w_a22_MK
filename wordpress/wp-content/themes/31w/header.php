@@ -24,7 +24,6 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header id="masthead" class="site__header">
-
 	<?php  /* Affichage du menu principal */
 			wp_nav_menu(array(
 			"menu" => "primaire",

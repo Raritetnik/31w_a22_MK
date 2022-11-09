@@ -1,7 +1,18 @@
 .site__branding {
 }
-.site__title {
-  font-size: clamp(2rem, 4vw, 5rem);
+.site__title a {
+  font-weight: 900;
+  color: tomato;
+  text-decoration: none;
+  font-size: 7vmin;
+  margin-left: 40px;
 }
 .site__description {
+  margin-left: 20px;
+  font-size: 2vmin;
+}
+
+.site__header {
+  background-image: url(https://images.hdqwalls.com/download/among-trees-night-is-coming-ox-2048x1152.jpg);
+  background-size: cover;
 }
