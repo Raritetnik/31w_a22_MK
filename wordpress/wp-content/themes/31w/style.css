@@ -609,15 +609,15 @@ h6 {
   position: absolute;
   width: 100vw;
   top: 70px;
+  z-index: 20;
   transform: translateX(-100vw);
-  transition: transform 0.5s;
+  transition: transform 0.5s cubic-bezier(0.07, 0.64, 0.32, 0.91);
   background-color: #000;
 }
 @media screen and (min-width: 700px) {
   .menu__aside {
     position: static;
     transform: translateX(0);
-    /* important de revenir à width 100%  pour remplacer le 100vw*/
     width: 100%;
   }
 }
@@ -628,15 +628,10 @@ h6 {
 }
 .menu__aside a {
   text-decoration: none;
-  padding: 5px 3px;
+  color: white;
+  padding: 10px;
 }
 
-/*
-.menu__aside{}
-.menu__aside .menu {}
-.menu__aside .menu-item {}
-.menu__aside a {}
-*/
 /* Layout */
 .site__header {
   grid-area: header;
