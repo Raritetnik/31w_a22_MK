@@ -36,7 +36,7 @@
   z-index: 20;
   transform: translateX(-100vw);
   transition: transform 0.5s cubic-bezier(.07,.64,.32,.91);
-  background-color: #000;
+  background-color: rgba($color: #000000, $alpha: .7);
   @media screen and (min-width: 700px) {
     position: static;
     transform: translateX(0);
@@ -46,15 +46,19 @@
   .menu {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    width: 100%;
   }
-
   .menu-item {
+    padding: .6vmin;
+    width: 100%;
+  }
+  .menu-item:hover {
+    background-color: rgba($color: white, $alpha: .3);
   }
 
   a {
     text-decoration: none;
     color: white;
-    padding: 10px;
+    font-size: 1.7vmin;
   }
 }

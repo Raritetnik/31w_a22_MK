@@ -350,7 +350,7 @@ html {
 
 /* Elements */
 body {
-  background: #fff;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 input[type=text],
@@ -612,7 +612,7 @@ h6 {
   z-index: 20;
   transform: translateX(-100vw);
   transition: transform 0.5s cubic-bezier(0.07, 0.64, 0.32, 0.91);
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 @media screen and (min-width: 700px) {
   .menu__aside {
@@ -624,12 +624,19 @@ h6 {
 .menu__aside .menu {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  width: 100%;
+}
+.menu__aside .menu-item {
+  padding: 0.6vmin;
+  width: 100%;
+}
+.menu__aside .menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .menu__aside a {
   text-decoration: none;
   color: white;
-  padding: 10px;
+  font-size: 1.7vmin;
 }
 
 /* Layout */

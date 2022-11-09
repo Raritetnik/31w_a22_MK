@@ -36,7 +36,8 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</h1>
 		<?php
-			$underscore_description = get_bloginfo( 'description', 'display' );
+			//$underscore_description = get_bloginfo( 'description', 'display' );
+			$underscore_description = "Bienvenue sur le site Wordpress de Mykhaylo Kuzmin";
 			if ( $underscore_description || is_customize_preview() ) : ?>
 			<p class="site__description"><?php echo $underscore_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
