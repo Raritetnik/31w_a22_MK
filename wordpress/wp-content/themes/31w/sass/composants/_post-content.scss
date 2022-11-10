@@ -1,0 +1,36 @@
+.cart-post {
+    padding: 2vmin;
+    border: .4vmin solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: white;
+}
+
+.cart-post h1 {
+    margin: 0;
+}
+
+.post__titre {
+    text-decoration: none;
+    color: tomato;
+    font-size: 5vmin;
+}
+
+.cart-post .post-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Accueil */
+
+.info-accueil {
+    padding: 3vmin;
+    color: white;
+    text-align: center;
+}
+
+.info-accueil h2 {
+    color: tomato;
+}
