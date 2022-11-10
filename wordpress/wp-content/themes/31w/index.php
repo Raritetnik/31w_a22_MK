@@ -16,6 +16,7 @@
 
 <?php get_header(); ?>
     <main class="site__main">
+    <code>index.php</code>
         <div class="info-accueil">
         <?php
             if ( have_posts() ) :
