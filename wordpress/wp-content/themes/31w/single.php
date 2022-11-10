@@ -13,7 +13,6 @@
  * @package underscore
  */
 ?>
-<h1 class="trace">single.php</h1>
 <?php get_header(); ?>
 
     <main class="site__main">
@@ -21,17 +20,20 @@
 		if ( have_posts() ) :
             while ( have_posts() ) :
 				the_post();
-                the_title('<h2>','</h2>');
+                ?>
+                <div class="cart-post">
+                <?php
+                the_title('<h2 class="post__titre">','</h2>');
                 the_content(null, true);?>
-                <section>
-                    <small>
-                        <span><?php the_weekday(); ?></span>
-                        <span><?php the_date(); ?></span>
-                        <span><?php the_time(); ?></span>
-                    </small>
-                    <code><?php the_author(); ?></code>
-                    <pre><?php the_category(); ?></pre>
-                </section>
+                    <div class="post-details">
+                        <p><?php the_weekday(); ?> <?= get_the_time(); ?></p>
+                        <p>Catégorie: <?php the_category(); ?></p>
+                    </div>
+                    <div class="post-details">
+                        <p>Date: <?= get_the_date() ?></p>
+                        <p>Auteur: <?php the_author() ?></p>
+                    </div>
+                </div>
                 <?php
 
 
