@@ -19,14 +19,40 @@
     <main class="site__main">
     <?php
 		if ( have_posts() ) :
-            while ( have_posts() ) :
-				the_post(); ?>
-                <h1><a href="<?php the_permalink(); ?>">
-                <?php the_title(); ?></a></h1>
-                <h2>Durée du cours: <?php  ?></h2>
-                <?php the_content(null, true); ?>
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
+				$titre = get_the_title();
+				$code_cours = substr($titre,0,7);
+				$heure_cours = substr($titre,strrpos($titre,'('));
+				$titre = substr($titre,8);
+				$longueur = strlen($titre);
 
-            <?php endwhile; ?>
+				//$titre = substr($titre, strrpos($titre,'(') - strlen($titre));
+				$titre = substr($titre, 0, strrpos($titre,'(') - strlen($titre));
+				?>
+			<header>
+				<h1><?= $titre  ?></h1>
+				<code>Sigle du cours<?= $code_cours  ?></code>
+				<code>Nombre d'heures<?= $heure_cours  ?></code>
+			</header>
+
+
+			<?php the_content();
+			$le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
+			?>
+
+			<blockquote><?php the_excerpt(); ?></blockquote>
+			<blockquote><?= wp_trim_words(get_the_excerpt(),5, $le_permalien); ?></blockquote>
+
+			<pre><?php the_category(); ?></pre>
+			<pre><?php the_date(); ?></pre>
+			<pre><?php the_permalink();  ?></pre>
+			<pre><?php the_author(); ?></pre>
+
+<?php
+
+            endwhile; ?>
         <?php endif; ?>
 
     </main>

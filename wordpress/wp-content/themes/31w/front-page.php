@@ -15,17 +15,27 @@
 ?>
 <!-- h1 class="trace">front-page.php</h1 -->
 <?php get_header(); ?>
-
     <main class="site__main">
+    <code>front-page.php</code>
     <?php
+    wp_nav_menu(array(
+        "menu" => "evenement",
+        "container" => "nav",
+        "container_class" => "menu_evenement"
+    ));
 		if ( have_posts() ) :
             while ( have_posts() ) :
-				the_post(); ?>
+				the_post();
+                $titre = get_the_title();?>
                 <div class="cart-post">
                     <h1><a class='post__titre' href="<?php the_permalink(); ?>">
                     <?php the_title(); ?></a></h1>
                     <p>Desription: <?php the_content(null, true); ?></p>
-
+                    <div class="post-desc">
+                        <p>Sigle du cours: <?= the_field('code_cours') ?></p>
+                        <p>Durée de cours: <?php the_field('duree_de_cours') ?> heures</p>
+                        <p>Type de cours: <?php the_field('type_de_cours') ?></p>
+                    </div>
                     <div class="post-details">
                         <p>Date: <?= get_the_date() ?></p>
                         <p>Auteur: <?php the_author() ?></p>
