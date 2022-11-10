@@ -3,6 +3,7 @@
 ## 31w - Mykhaylo Kuzmin
 <br> Titre: _31w
 <br> Auteur: Mykhaylo Kuzmin
+<br>  SiteGround - Lien serveur: https://gogom5.sg-host.com/
 
 ## Description
 <br> Une extension de thème en foncé. "Dark Mode" permet de circuler sur le site. La page d'Accueil represente une carrousel des images. La page pricipale est une ensemble des diffèrents articles dans des boites. Un autre menu sur le côté est offert avec possibilité d'ajout des features comme calendrier etc. 
