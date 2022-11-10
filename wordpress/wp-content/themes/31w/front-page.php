@@ -21,7 +21,7 @@
     wp_nav_menu(array(
         "menu" => "evenement",
         "container" => "nav",
-        "container_class" => "menu_evenement"
+        "container_class" => "menu__evenement"
     ));
 		if ( have_posts() ) :
             while ( have_posts() ) :
