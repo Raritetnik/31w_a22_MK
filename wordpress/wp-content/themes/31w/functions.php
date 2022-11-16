@@ -118,20 +118,19 @@ function igc31w_filtre_choix_menu($obj_menu, $arg){
 
 add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu", 10,2);
 
-/* ----------------------------------------------------------- Ajout de la description dans menu */
-/** filtre du menu evenement
- * @arg  string $item_output  string représentant l'élément du menu
- * @arg obj $item    element du menu
- */
-function prefix_nav_description( $item_output, $item) {
-    if ( !empty( $item->description ) ) {
-        $item_output = str_replace( '</a>',
-        '<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu__item__icone"></div></a>',
-              $item_output );
+/* ----------------------------------------------------------- Ajout de la description dans menu
+
+Remplace </a> en ajoutant la balise de description
+SI description existe */
+function menu_ajout_description( $menuItemTexte, $itemMenu) {
+    if ( !empty( $itemMenu->description ) ) {
+        $menuItemTexte = str_replace( '</a>',
+        '<hr><span class="menu-item-description">' . $itemMenu->description . '</span><div class="menu__item__icone"></div></a>',
+              $menuItemTexte );
     }
-    return $item_output;
+    return $menuItemTexte;
 }
-add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );
+add_filter( 'walker_nav_menu_start_el', 'menu_ajout_description', 10, 2 );
 
 /* -------------------------------------------------------- Initialisation des sidebar */
 
