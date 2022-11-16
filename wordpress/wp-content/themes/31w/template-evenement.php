@@ -11,12 +11,11 @@
 ?>
 
 <main class="site__main">
-     <h1>---- page.php ------</h1>
      <?php if (have_posts()): while(have_posts()): the_post(); ?>
-     <?php the_title() ?>
-     <?php the_content() ?>
-     <?php the_field('adresse') ?>
-     <?php the_field('date_evenement') ?>
+     <h1 class="post__titre"><?php the_title() ?></h1>
+     <p><?php the_content() ?></p>
+     <p><?php the_field('adresse') ?></p>
+     <p><?php the_field('date_evenement') ?></p>
      <?php endwhile ?>
      <?php endif ?>
 </main>
