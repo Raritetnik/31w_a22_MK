@@ -648,6 +648,24 @@ h6 {
   font-size: 3vmin;
 }
 
+.menu__evenement .menu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.menu__evenement .menu-item {
+  flex: 0 1 200px;
+  border: 1px solid white;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.menu__evenement .menu-item a {
+  text-decoration: none;
+}
+
 .site__title a {
   font-weight: 900;
   color: tomato;
@@ -704,7 +722,13 @@ h6 {
 
 .info-accueil h2 {
   color: tomato;
-} /* Layout */
+}
+
+p {
+  color: white;
+}
+
+/* Layout */
 .site__header {
   grid-area: header;
   background-color: rgba(0, 0, 0, 0.3);
