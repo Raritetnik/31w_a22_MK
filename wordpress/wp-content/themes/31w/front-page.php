@@ -16,7 +16,6 @@
 <!-- h1 class="trace">front-page.php</h1 -->
 <?php get_header(); ?>
     <main class="site__main">
-    <code>front-page.php</code>
     <?php
     wp_nav_menu(array(
         "menu" => "evenement",
