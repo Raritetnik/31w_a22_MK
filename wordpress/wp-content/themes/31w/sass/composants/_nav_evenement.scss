@@ -1,0 +1,21 @@
+.menu__evenement {
+
+}
+
+.menu__evenement .menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.menu__evenement .menu-item {
+    flex: 0 1 200px;
+    border: 1px solid white;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.menu__evenement .menu-item a {
+    text-decoration: none;
+}
