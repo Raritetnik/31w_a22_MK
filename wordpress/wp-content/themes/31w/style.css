@@ -692,10 +692,6 @@ h6 {
   background-image: url("https://s2.svgbox.net/hero-outline.svg?ic=chip");
 }
 
-.grille__article {
-  flex: 0 1 250px;
-}
-
 .grille {
   display: flex;
   justify-content: space-between;
@@ -721,6 +717,8 @@ h6 {
 }
 
 .cart-post {
+  display: inline-block;
+  flex: 0 1 45%;
   padding: 2vmin;
   border: 0.4vmin solid white;
   border-radius: 10px;

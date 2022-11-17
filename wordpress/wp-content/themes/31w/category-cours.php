@@ -18,8 +18,16 @@
 
     <main class="site__main">
     <?php
+	wp_nav_menu(array(
+        "menu" => "evenement",
+        "container" => "nav",
+        "container_class" => "menu__evenement"
+    ));
 		if ( have_posts() ) :
 			/* Start the Loop */
+			?>
+			<div class="grille">
+			<?php
 			while ( have_posts() ) :
 				the_post();
 				$titre = get_the_title();
@@ -31,28 +39,35 @@
 				//$titre = substr($titre, strrpos($titre,'(') - strlen($titre));
 				$titre = substr($titre, 0, strrpos($titre,'(') - strlen($titre));
 				?>
-			<header>
+			<!--<header>
 				<h1><?= $titre  ?></h1>
 				<code>Sigle du cours<?= $code_cours  ?></code>
 				<code>Nombre d'heures<?= $heure_cours  ?></code>
-			</header>
+			</header>-->
 
 
-			<?php the_content();
+			<?php
 			$le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
 			?>
-
-			<blockquote><?php the_excerpt(); ?></blockquote>
-			<blockquote><?= wp_trim_words(get_the_excerpt(),5, $le_permalien); ?></blockquote>
-
-			<pre><?php the_category(); ?></pre>
-			<pre><?php the_date(); ?></pre>
-			<pre><?php the_permalink();  ?></pre>
-			<pre><?php the_author(); ?></pre>
-
+			<div class="cart-post">
+                    <h1><a class='post__titre' href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?></a></h1>
+                    <p>Desription:
+						<?= get_the_excerpt();?>
+					<?= wp_trim_words(get_the_excerpt(),5, $le_permalien); ?></p>
+                    <div class="post-desc">
+                        <p>Sigle du cours: <?= the_field('code_cours') ?></p>
+                        <p>Durée de cours: <?php the_field('duree_cours') ?> heures</p>
+                        <p>Type de cours: <?php the_field('type_cours') ?></p>
+                    </div>
+                    <div class="post-details">
+                        <p>Date: <?= get_the_date() ?></p>
+                        <p>Auteur: <?php the_author() ?></p>
+                    </div>
+                </div>
 <?php
-
             endwhile; ?>
+			</div>
         <?php endif; ?>
 
     </main>
