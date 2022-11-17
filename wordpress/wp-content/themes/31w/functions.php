@@ -132,6 +132,13 @@ function menu_ajout_description( $menuItemTexte, $itemMenu) {
 }
 add_filter( 'walker_nav_menu_start_el', 'menu_ajout_description', 10, 2 );
 
+function modifier_requete_principale( $query ) {
+	if( $query->is_home() && $query->is_main_query() && ! is_admin()) {
+		$query->set( 'category_name', 'accueil');
+	}
+}
+add_action('pre_get_posts', 'modifier_requete_principale');
+
 /* -------------------------------------------------------- Initialisation des sidebar */
 
 add_action( 'widgets_init', 'my_register_sidebars' );
@@ -211,4 +218,6 @@ function my_register_sidebars() {
 		)
 	);
 	/* Repeat register_sidebar() code for additional sidebars. */
+
+
 }
