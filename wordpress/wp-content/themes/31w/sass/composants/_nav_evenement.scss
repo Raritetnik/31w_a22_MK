@@ -29,21 +29,22 @@
 
 .evenement__stage {
     background-color: rgba($color: tomato, $alpha: .5);
-    .menu__item__icone {
-        background-image: url('https://s2.svgbox.net/hero-outline.svg?ic=chip');
-    }
+
 }
 
 .evenement__porte {
     background-color: rgba($color: aquamarine, $alpha: .5);
-    .menu__item__icone {
-        background-image: url('https://s2.svgbox.net/hero-outline.svg?ic=chip');
-    }
+
 }
 
 .menu__accueil {
     background-color: rgba($color: lightblue, $alpha: .7);
-    .menu__item__icone {
-        background-image: url('https://s2.svgbox.net/hero-outline.svg?ic=chip');
-    }
+
+}
+
+.menu__item__icone {
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-image: url('https://s2.svgbox.net/hero-outline.svg?ic=chip');
 }

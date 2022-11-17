@@ -29,8 +29,7 @@
                 $titre = get_the_title();?>
                 <article class="grille__article">
                     <h6><?= get_the_title()?></h6>
-                    <p>--------------------------------------------</p>
-                    <?php echo("<h2>BRUG: ".is_category('galerie')."</h2>");
+                    <?php
                     if (in_category('Galerie')) {
 
                     }?>
