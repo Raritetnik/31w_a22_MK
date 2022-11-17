@@ -673,6 +673,18 @@ h6 {
   color: white;
 }
 
+.evenement__stage {
+  background-color: rgba(255, 99, 71, 0.5);
+}
+
+.evenement__porte {
+  background-color: rgba(127, 255, 212, 0.5);
+}
+
+.menu__accueil {
+  background-color: rgba(173, 216, 230, 0.7);
+}
+
 .site__title a {
   font-weight: 900;
   color: tomato;

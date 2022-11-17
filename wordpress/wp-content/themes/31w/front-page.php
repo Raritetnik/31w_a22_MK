@@ -25,7 +25,16 @@
 		if ( have_posts() ) :
             while ( have_posts() ) :
 				the_post();
+
                 $titre = get_the_title();?>
+                <article class="grille__article">
+                    <h6><?= get_the_title()?></h6>
+                    <?php if (is_category('galerie')) {
+                        echo "Galerie";
+                        }?>
+                </article>
+
+
                 <div class="cart-post">
                     <h1><a class='post__titre' href="<?php the_permalink(); ?>">
                     <?php the_title(); ?></a></h1>
