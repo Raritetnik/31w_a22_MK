@@ -42,8 +42,8 @@
                     <p>Desription: <?php the_content(null, true); ?></p>
                     <div class="post-desc">
                         <p>Sigle du cours: <?= the_field('code_cours') ?></p>
-                        <p>Durée de cours: <?php the_field('duree_de_cours') ?> heures</p>
-                        <p>Type de cours: <?php the_field('type_de_cours') ?></p>
+                        <p>Durée de cours: <?php the_field('duree_cours') ?> heures</p>
+                        <p>Type de cours: <?php the_field('type_cours') ?></p>
                     </div>
                     <div class="post-details">
                         <p>Date: <?= get_the_date() ?></p>

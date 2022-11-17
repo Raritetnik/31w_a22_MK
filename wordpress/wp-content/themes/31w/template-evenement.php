@@ -14,8 +14,8 @@
      <?php if (have_posts()): while(have_posts()): the_post(); ?>
      <h1 class="post__titre"><?php the_title() ?></h1>
      <p><?php the_content() ?></p>
-     <p><?php the_field('adresse') ?></p>
-     <p><?php the_field('date_evenement') ?></p>
+     <p>Adresse: <?php the_field('adresse') ?></p>
+     <p>Date et heure: <?php the_field('date_heure') ?></p>
      <?php endwhile ?>
      <?php endif ?>
 </main>
