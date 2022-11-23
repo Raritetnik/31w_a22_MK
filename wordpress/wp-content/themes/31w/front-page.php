@@ -26,22 +26,25 @@
             if ( have_posts() ) :
                 /* Start the Loop */
                 while ( have_posts() ) :
-                the_post(); ?>
-                <article class="grille__article">
-                <h6><?= get_the_title(); ?></h6>
+                    the_post(); ?>
 
-                <?php  //echo (in_category('accueil')) ?>
+                    <?php
+                    $mes_categories = get_the_category();
+                    if(in_category('galerie')): ?>
+                        <article class="grille__galerie">
+                            <h6><?= get_the_title(); ?></h6>
+                            <?php the_content() ?>
+                        </article>
+                    <?php else: ?>
+                        <article class="grille__article">
+                            <h6><?= get_the_title(); ?></h6>
+                            <?php $le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>"; ?>
+                            <p><?= wp_trim_words(get_the_excerpt(), 20,$le_permalien) ; ?></p>
+                            <p>Type de cours: <?php the_field("type_cours")?></p>
+                            <p>TIM - Collège de Maisonneuve</p>
 
-                <?php
-                $le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
-                ?>
-
-                <p><?= wp_trim_words(get_the_excerpt(), 20,$le_permalien) ; ?></p>
-                <p>Type de cours: <?php the_field("type_cours")?></p>
-                <p>TIM - Collège de Maisonneuve</p>
-
-                </article>
-                <?php
+                        </article>
+                    <?php endif;
                 endwhile;
             endif;?>
         </section>
