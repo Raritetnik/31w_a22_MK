@@ -6,9 +6,17 @@
 }
 
 .grille__article {
-    flex: 0 1 250px;
+    flex: 1 1 250px;
     border: 1px dotted white;
     margin: 5px;
+    flex-direction: column;
     font-size: 2.5vmin;
+    text-align: center;
+    padding: 3px;
 
+}
+
+.grille__article p,
+.grille__article h6 {
+    gap: 10px
 }
