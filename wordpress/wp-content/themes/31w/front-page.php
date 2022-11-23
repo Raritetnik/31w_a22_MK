@@ -15,6 +15,7 @@
 ?>
 <!-- h1 class="trace">front-page.php</h1 -->
 <?php get_header(); ?>
+<code>FRONT PAGE</code>
     <main class="site__main">
     <?php
     wp_nav_menu(array(
@@ -28,7 +29,6 @@
 
                 $titre = get_the_title();?>
                 <article class="grille__article">
-                    <h6><?= get_the_title()?></h6>
                     <?php
                     if (in_category('Galerie')) {
 
@@ -51,8 +51,8 @@
                     </div>
                 </div>
 
-            <?php endwhile; ?>
-        <?php endif; ?>
+            <?php endwhile;
+        endif;?>
 
     </main>
 <?php get_footer(); ?>
