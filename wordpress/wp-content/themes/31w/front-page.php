@@ -15,45 +15,35 @@
 ?>
 <!-- h1 class="trace">front-page.php</h1 -->
 <?php get_header(); ?>
-<code>FRONT PAGE</code>
     <main class="site__main">
     <?php
     wp_nav_menu(array(
         "menu" => "evenement",
         "container" => "nav",
         "container_class" => "menu__evenement"
-    ));
-		if ( have_posts() ) :
-            while ( have_posts() ) :
-				the_post();
-
-                $titre = get_the_title();?>
+    ));?>
+		<section class="grille"><?php
+            if ( have_posts() ) :
+                /* Start the Loop */
+                while ( have_posts() ) :
+                the_post(); ?>
                 <article class="grille__article">
-                    <?php
-                    if (in_category('Galerie')) {
+                <h6><?= get_the_title(); ?></h6>
+                ------------------
+                <?php  echo (in_category('galerie')) ?>
 
-                    }?>
+                <?php
+                $le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
+                ?>
+
+                <p><?= wp_trim_words(get_the_excerpt(), 20,$le_permalien) ; ?></p>
+
+
                 </article>
-
-
-                <div class="cart-post">
-                    <h1><a class='post__titre' href="<?php the_permalink(); ?>">
-                    <?php the_title(); ?></a></h1>
-                    <p>Desription: <?php the_content(null, true); ?></p>
-                    <div class="post-desc">
-                        <p>Sigle du cours: <?= the_field('code_cours') ?></p>
-                        <p>Durée de cours: <?php the_field('duree_cours') ?> heures</p>
-                        <p>Type de cours: <?php the_field('type_cours') ?></p>
-                    </div>
-                    <div class="post-details">
-                        <p>Date: <?= get_the_date() ?></p>
-                        <p>Auteur: <?php the_author() ?></p>
-                    </div>
-                </div>
-
-            <?php endwhile;
-        endif;?>
-
+                <?php
+                endwhile;
+            endif;?>
+        </section>
     </main>
 <?php get_footer(); ?>
 </html>

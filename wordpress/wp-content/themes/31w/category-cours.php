@@ -49,7 +49,6 @@
 			<?php
 			$le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
 			?>
-			<code>CATEGORY COURS</code>
 			<div class="cart-post">
                     <h1><a class='post__titre' href="<?php the_permalink(); ?>">
                     <?php the_title(); ?></a></h1>

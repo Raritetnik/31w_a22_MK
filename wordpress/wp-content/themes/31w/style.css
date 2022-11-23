@@ -656,7 +656,7 @@ h6 {
 }
 
 .menu__evenement .menu-item {
-  flex: 0 1 200px;
+  flex: 0 1 400px;
   border: 1px solid white;
   border-radius: 3px;
   text-align: center;
@@ -696,6 +696,13 @@ h6 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.grille__article {
+  flex: 0 1 250px;
+  border: 1px dotted white;
+  margin: 5px;
+  font-size: 2.5vmin;
 }
 
 .site__title a {

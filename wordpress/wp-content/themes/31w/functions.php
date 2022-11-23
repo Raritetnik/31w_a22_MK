@@ -132,6 +132,7 @@ function menu_ajout_description( $menuItemTexte, $itemMenu) {
 }
 add_filter( 'walker_nav_menu_start_el', 'menu_ajout_description', 10, 2 );
 
+
 function modifier_requete_principale( $query ) {
 	if( $query->is_home() && $query->is_main_query() && ! is_admin()) {
 		$query->set( 'category_name', 'accueil');
@@ -218,6 +219,5 @@ function my_register_sidebars() {
 		)
 	);
 	/* Repeat register_sidebar() code for additional sidebars. */
-
 
 }
