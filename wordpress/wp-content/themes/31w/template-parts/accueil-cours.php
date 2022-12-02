@@ -7,6 +7,7 @@
 ?>
 
 <article class="grille__article">
+    <?php the_post_thumbnail('medium') ?>
     <h6><?= $titre ?></h6>
     <?php $le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>"; ?>
     <p><?= wp_trim_words(get_the_excerpt(), 20,$le_permalien) ; ?></p>

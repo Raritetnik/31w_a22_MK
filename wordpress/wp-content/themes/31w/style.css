@@ -699,6 +699,7 @@ h6 {
 }
 
 .grille__article {
+  position: relative;
   flex: 1 1 250px;
   border: 1px dotted white;
   margin: 5px;
@@ -706,11 +707,33 @@ h6 {
   font-size: 2.5vmin;
   text-align: center;
   padding: 3px;
+  overflow: hidden;
+  transition: opacity 1s;
+}
+
+.grille__article > p,
+.grille__article > h6 {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.grille__article img {
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
 }
 
 .grille__article p,
 .grille__article h6 {
   gap: 10px;
+}
+
+.grille__article:hover > p,
+.grille__article:hover > h6 {
+  opacity: 1;
 }
 
 .site__title a {
