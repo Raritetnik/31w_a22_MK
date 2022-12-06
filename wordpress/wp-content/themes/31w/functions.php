@@ -40,6 +40,31 @@ function underscore_setup() {
 			'script',
 		)
 	);
+	/**
+     * Add support for core custom logo.
+     *
+     * @link https://codex.wordpress.org/Theme_Logo
+     */
+	add_theme_support(
+        'custom-logo',
+        array(
+            'height'      => 250,
+            'width'       => 250,
+            'flex-width'  => true,
+            'flex-height' => true,
+        )
+    );
+
+	add_theme_support(
+        'custom-background',
+        apply_filters(
+            'igc31w_custom_background_args',
+            array(
+                'default-color' => 'ffffff',
+                'default-image' => '',
+            )
+        )
+    );
 }
 add_action( 'after_setup_theme', 'underscore_setup' );
 
@@ -220,4 +245,5 @@ function my_register_sidebars() {
 	);
 	/* Repeat register_sidebar() code for additional sidebars. */
 
+	require_once('options/apparence.php');
 }
