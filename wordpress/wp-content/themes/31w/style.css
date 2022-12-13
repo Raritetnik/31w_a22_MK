@@ -658,6 +658,7 @@ h6 {
 }
 
 .menu__evenement .menu-item {
+  position: relative;
   flex: 0 1 400px;
   border: 1px solid white;
   border-radius: 3px;
@@ -688,6 +689,9 @@ h6 {
 }
 
 .menu__item__icone {
+  position: absolute;
+  top: 5px;
+  left: 0;
   width: 32px;
   height: 32px;
   background-repeat: no-repeat;
@@ -841,6 +845,14 @@ h6 {
 }
 
 p {
+  color: white;
+}
+
+.carte {
+  margin-left: 20px;
+}
+
+.carte__titre {
   color: white;
 }
 

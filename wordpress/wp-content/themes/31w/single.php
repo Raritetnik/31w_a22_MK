@@ -16,20 +16,22 @@
 <?php get_header(); ?>
 
     <main class="site__main">
-    <code>single.php</code>
     <?php
 		if ( have_posts() ) :
 			/* Start the Loop */
-				the_post(); ?>
-				<?php the_post_thumbnail('thumbnail'); ?>
-				<?php the_post_thumbnail('medium'); ?>
-				<?php the_post_thumbnail('large'); ?>
-				<?php the_post_thumbnail(); ?>
-			<h1><?= get_the_title(); ?></h1>
-			<?php the_content();
-			endif;
+				the_post();
+				/*the_post_thumbnail('thumbnail');
+				the_post_thumbnail('medium');
+				the_post_thumbnail('large'); ?>
+				the_post_thumbnail();*/ ?>
+			<article class="carte">
+				<h1 class="carte__titre"><?= get_the_title(); ?></h1>
+				<div class="cart__contenu">
+					<?php the_content(); ?>
+				</div>
+			</article>
+			<?php endif;
 		?>
-    ?>
     </main>
 
 <?php get_footer(); ?>
