@@ -30,7 +30,9 @@
                     $mes_categories = get_the_category();
                     if(in_category('galerie')):
                         get_template_part('template-parts/accueil-galerie', '');
-                    else:
+                    elseif(in_category('note')):
+                        get_template_part( 'template-parts/accueil-note', '' );
+                    elseif(in_category('cours')):
                         get_template_part('template-parts/accueil-cours', '');
                     endif;
                 endwhile;

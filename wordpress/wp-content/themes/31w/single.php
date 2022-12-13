@@ -19,29 +19,16 @@
     <code>single.php</code>
     <?php
 		if ( have_posts() ) :
-            while ( have_posts() ) :
-				the_post();
-                ?>
-                <div class="cart-post">
-                <?php
-                the_title('<h2 class="post__titre">','</h2>');
-                the_content(null, true);?>
-                    <div class="post-details">
-                        <p><?php the_weekday(); ?> <?= get_the_time(); ?></p>
-                        <p>Catégorie: <?php the_category(); ?></p>
-                    </div>
-                    <div class="post-details">
-                        <p>Date: <?= get_the_date() ?></p>
-                        <p>Auteur: <?php the_author() ?></p>
-                    </div>
-                </div>
-                <?php
-
-
-
-
-            endwhile;
-        endif;
+			/* Start the Loop */
+				the_post(); ?>
+				<?php the_post_thumbnail('thumbnail'); ?>
+				<?php the_post_thumbnail('medium'); ?>
+				<?php the_post_thumbnail('large'); ?>
+				<?php the_post_thumbnail(); ?>
+			<h1><?= get_the_title(); ?></h1>
+			<?php the_content();
+			endif;
+		?>
     ?>
     </main>
 
