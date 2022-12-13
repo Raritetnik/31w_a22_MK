@@ -248,7 +248,7 @@ function my_register_sidebars() {
 	register_sidebar(
 		array(
 			'id'            => 'nav-aside-1',
-			'name'          => __( 'Sidebar - nav-aside-1' ),
+			'name'          => __( 'Sidebar - nav-1' ),
 			'description'   => __( 'Première aside de navigation' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
@@ -260,7 +260,7 @@ function my_register_sidebars() {
 	register_sidebar(
 		array(
 			'id'            => 'nav-aside-2',
-			'name'          => __( 'Sidebar - nav-aside-2' ),
+			'name'          => __( 'Sidebar - nav-2' ),
 			'description'   => __( 'Deuxième aside de navigation' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',

@@ -32,23 +32,24 @@
 			"menu" => "primaire",
 			"container" => "nav",
 			"container_class" => "menu__principal")); ?>
+		<section class="site__banner">
+			<div class="site__branding">
+				<h1 class="site__title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</h1>
+			<?php
+				//$underscore_description = get_bloginfo( 'description', 'display' );
+				$underscore_description = "Bienvenue sur le site Wordpress de Mykhaylo Kuzmin";
+				if ( $underscore_description || is_customize_preview() ) : ?>
+				<p class="site__description"><?php echo $underscore_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php endif; ?>
 
-		<div class="site__branding">
-			<h1 class="site__title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</h1>
-		<?php
-			//$underscore_description = get_bloginfo( 'description', 'display' );
-			$underscore_description = "Bienvenue sur le site Wordpress de Mykhaylo Kuzmin";
-			if ( $underscore_description || is_customize_preview() ) : ?>
-			<p class="site__description"><?php echo $underscore_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-
-		</div><!-- .site-branding -->
-		<aside class="site__sidebar__nav">
-			<?php get_sidebar( 'nav-aside-1' );?>
-			<?php get_sidebar( 'nav-aside-2' );?>
-		</aside>
+			</div><!-- .site-branding -->
+			<aside class="site__sidebar__nav">
+				<?php get_sidebar( 'nav-1' );?>
+				<?php get_sidebar( 'nav-2' );?>
+			</aside>
+		</section>
 	</header><!-- #masthead -->
 	<aside class="site__menu">
 		<input type="checkbox" name="chk-burger" id="chk-burger" class="chk-burger">
