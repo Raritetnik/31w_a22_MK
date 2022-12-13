@@ -738,6 +738,20 @@ h6 {
   opacity: 1;
 }
 
+.grille__article-recherche {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  align-items: center;
+  margin: 15px;
+  border-bottom: 2px dotted white;
+}
+
+.grille__article-recherche h5 {
+  margin: 0;
+  color: white;
+  padding-bottom: 20px;
+}
+
 .site__banner {
   display: flex;
   flex-direction: row;

@@ -20,17 +20,15 @@
                 /* Start the Loop */
                 while ( have_posts() ) :
                     the_post();
-                    $mes_categories = get_the_category();
-                    if(in_category('galerie')):
-                        get_template_part('template-parts/accueil-galerie', '');
-                    elseif(in_category('note')):
-                        get_template_part( 'template-parts/accueil-note', '' );
-                    elseif(in_category('cours')):
-                        get_template_part('template-parts/accueil-cours', '');
-                    endif;
+                    get_template_part('template-parts/recherche-element', '');
                 endwhile;
             endif;?>
         </section>
+        <?php
+        // Quantité de resultats de recherche
+        global $wp_query;
+        $total_results = $wp_query->found_posts;?>
+        <div class="nbr__elements"><p>Nombre de résultat: <?= $total_results ?></p></div>
     </main>
 <?php get_footer(); ?>
 </html>
