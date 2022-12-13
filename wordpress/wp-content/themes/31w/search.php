@@ -12,9 +12,18 @@
  * @package underscore
  */
 ?>
+
+<?php
+// Quantité de resultats de recherche
+global $wp_query;
+$total_results = $wp_query->found_posts;?>
 <!-- h1 class="trace">front-page.php</h1 -->
 <?php get_header(); ?>
     <main class="site__main">
+        <div class="titre__section-recherche">
+            <h2>Résultat de la recherche</h2>
+            <p>Elément de recherche: « <?= get_query_var('s') ?> »</p>
+        </div>
 		<section class="grille"><?php
             if ( have_posts() ) :
                 /* Start the Loop */
@@ -24,10 +33,6 @@
                 endwhile;
             endif;?>
         </section>
-        <?php
-        // Quantité de resultats de recherche
-        global $wp_query;
-        $total_results = $wp_query->found_posts;?>
         <div class="nbr__elements"><p>Nombre de résultat: <?= $total_results ?></p></div>
     </main>
 <?php get_footer(); ?>
