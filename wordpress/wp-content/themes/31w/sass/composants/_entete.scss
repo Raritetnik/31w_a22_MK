@@ -3,6 +3,11 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.site__sidebar__nav {
+  align-self: center;
+}
+
 .site__title a {
   font-weight: 900;
   color: tomato;
