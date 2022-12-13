@@ -1,5 +1,7 @@
 # Examen Final - Créaton de widgets et affichage de résultats de recherche
 <br> Auteur: Myhaylo Kuzmin
+<br> Lien distant: https://gogom5.sg-host.com/
+<br> Lien GitHub: https://github.com/Raritetnik/31w_a22_MK/tree/ef
 <br> Titre: _31w
 
 ## Description
