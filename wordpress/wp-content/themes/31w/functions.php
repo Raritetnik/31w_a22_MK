@@ -11,7 +11,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
-
+require_once('options/apparence.php');
 //////////////////////////////////////////////////
 function underscore_setup() {
 
@@ -245,5 +245,4 @@ function my_register_sidebars() {
 	);
 	/* Repeat register_sidebar() code for additional sidebars. */
 
-	require_once('options/apparence.php');
 }
