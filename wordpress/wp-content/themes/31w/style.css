@@ -574,6 +574,16 @@ h6 {
 }
 
 /* transformation en CSS */
+.menu-primaire-container a {
+  text-decoration: underline;
+  color: white;
+}
+
+.menu-primaire-container a:hover {
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .site__menu {
   position: relative;
 }
@@ -649,6 +659,10 @@ h6 {
   color: white;
   font-size: 3vmin;
 }
+.menu__aside .sidebar-aside-1 {
+  color: wheat;
+  text-decoration: none;
+}
 
 .menu__evenement .menu {
   display: flex;
@@ -658,11 +672,19 @@ h6 {
 }
 
 .menu__evenement .menu-item {
-  flex: 0 1 400px;
+  position: relative;
+  flex: 0 1 30%;
   border: 1px solid white;
   border-radius: 3px;
   text-align: center;
   font-size: 3vmin;
+}
+@media screen and (max-width: 900px) {
+  .menu__evenement .menu-item {
+    flex: 0 1 90%;
+    flex-direction: column;
+    margin: 10px 0px;
+  }
 }
 
 .menu__evenement .menu-item:hover {
@@ -688,6 +710,9 @@ h6 {
 }
 
 .menu__item__icone {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 32px;
   height: 32px;
   background-repeat: no-repeat;
@@ -703,12 +728,12 @@ h6 {
 .grille__article {
   position: relative;
   flex: 1 1 250px;
-  border: 1px dotted white;
-  margin: 5px;
+  border: 1px solid tomato;
+  margin: 15px;
   flex-direction: column;
   font-size: 2.5vmin;
   text-align: center;
-  padding: 3px;
+  padding: 0 5px;
   overflow: hidden;
   transition: opacity 1s;
 }
@@ -717,6 +742,7 @@ h6 {
 .grille__article > h6 {
   opacity: 0;
   transition: opacity 1s;
+  text-shadow: 0px 0px 20px black;
 }
 
 .grille__article img {
@@ -800,6 +826,15 @@ h6 {
 
 p {
   color: white;
+}
+
+.carte__info {
+  color: white;
+  margin: 15px;
+}
+
+.carte__info h1 {
+  color: tomato;
 }
 
 /* Layout */

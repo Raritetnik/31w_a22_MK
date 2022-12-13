@@ -7,11 +7,17 @@
 }
 
 .menu__evenement .menu-item {
-    flex: 0 1 400px;
+    position: relative;
+    flex: 0 1 calc(90%/3);
     border: 1px solid white;
     border-radius: 3px;
     text-align: center;
     font-size: 3vmin;
+    @media screen and (max-width: 900px) {
+        flex: 0 1 90%;
+        flex-direction: column;
+        margin: 10px 0px;
+    }
 }
 
 .menu__evenement .menu-item:hover{
@@ -37,6 +43,9 @@
 }
 
 .menu__item__icone {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;

@@ -28,3 +28,12 @@
 } // fin .menu__principal
 
 /* transformation en CSS */
+.menu-primaire-container a{
+ text-decoration: underline;
+ color: white;
+}
+
+.menu-primaire-container a:hover{
+  text-decoration: underline;
+  color: rgba($color: #ffff, $alpha: .5);
+ }

@@ -8,12 +8,13 @@
 .grille__article {
     position: relative;
     flex: 1 1 250px;
-    border: 1px dotted white;
-    margin: 5px;
+    border: 1px solid tomato;
+    margin: 15px;
+
     flex-direction: column;
     font-size: 2.5vmin;
     text-align: center;
-    padding: 3px;
+    padding: 0 5px;
     overflow: hidden;
 
     transition: opacity 1s;
@@ -23,6 +24,7 @@
 .grille__article>h6 {
     opacity: 0;
     transition: opacity 1s;
+    text-shadow: 0px 0px 20px black;
 }
 .grille__article img {
     position: absolute;
