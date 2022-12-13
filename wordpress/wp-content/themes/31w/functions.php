@@ -243,6 +243,31 @@ function my_register_sidebars() {
 			'after_title'   => '</h3>',
 		)
 	);
+
+	// Navigation widgets
+	register_sidebar(
+		array(
+			'id'            => 'nav-aside-1',
+			'name'          => __( 'Sidebar - nav-aside-1' ),
+			'description'   => __( 'Première aside de navigation' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id'            => 'nav-aside-2',
+			'name'          => __( 'Sidebar - nav-aside-2' ),
+			'description'   => __( 'Deuxième aside de navigation' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 	/* Repeat register_sidebar() code for additional sidebars. */
 
 }

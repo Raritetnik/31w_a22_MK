@@ -43,8 +43,12 @@
 			if ( $underscore_description || is_customize_preview() ) : ?>
 			<p class="site__description"><?php echo $underscore_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
-		</div><!-- .site-branding -->
 
+		</div><!-- .site-branding -->
+		<aside class="site__sidebar__nav">
+			<?php get_sidebar( 'nav-aside-1' );?>
+			<?php get_sidebar( 'nav-aside-2' );?>
+		</aside>
 	</header><!-- #masthead -->
 	<aside class="site__menu">
 		<input type="checkbox" name="chk-burger" id="chk-burger" class="chk-burger">
