@@ -738,6 +738,12 @@ h6 {
   opacity: 1;
 }
 
+.site__banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .site__title a {
   font-weight: 900;
   color: tomato;
